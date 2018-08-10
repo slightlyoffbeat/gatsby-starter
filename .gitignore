@@ -1,6 +1,12 @@
+# Project dependencies
+.cache
 node_modules
-.cache/
-public/
-.DS_Store
 yarn-error.log
-haters
+
+# Build directory
+/public
+.DS_Store
+
+# Other
+haters/
+.vscode/

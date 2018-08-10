@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'gatsby-link';
 
 // Images
-import Logo from '../layout/img/logo.svg';
+import Logo from './img/logo.svg';
 
 const Navbar = () => (
   <div className="navbar">

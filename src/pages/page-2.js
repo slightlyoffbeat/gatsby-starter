@@ -3,13 +3,13 @@ import { Link } from 'gatsby';
 
 import Layout from '../layouts/layout';
 
-const IndexPage = () => (
+const SecondPage = () => (
   <Layout>
     <div className="container py12">
-      <h1>Hello World</h1>
-      <Link to="/page-2/">Go to page 2</Link>
+      <h1>MEH</h1>
+      <Link to="/">Go back to the homepage</Link>
     </div>
   </Layout>
 );
 
-export default IndexPage;
+export default SecondPage;
