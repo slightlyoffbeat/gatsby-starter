@@ -1,3 +1,5 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import { Link as GatsbyLink } from 'gatsby';
 import { spacing, typeSize } from '../styles/utils';
@@ -39,6 +41,15 @@ export const H5 = styled.h5`
   text-transform: uppercase;
   letter-spacing: 0.5px;
 `;
+
+export const Heading = ({ h1, h2, h3, h4, h5, ...props }) => {
+  if (h1) return <H1 {...props} />;
+  if (h2) return <H2 {...props} />;
+  if (h3) return <H3 {...props} />;
+  if (h4) return <H4 {...props} />;
+  if (h5) return <H5 {...props} />;
+  return <H1 {...props} />;
+};
 
 /* TYPE */
 export const P = styled.p`
@@ -120,3 +131,11 @@ export const UL = styled.ul`
 export const OL = styled.ul`
   ${baseListStyles};
 `;
+
+Heading.propTypes = {
+  h1: PropTypes.node,
+  h2: PropTypes.node,
+  h3: PropTypes.node,
+  h4: PropTypes.node,
+  h5: PropTypes.node,
+};

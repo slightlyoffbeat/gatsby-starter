@@ -1,13 +1,14 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import Container from '../components/Container';
+import { Heading } from '../components/Type';
 
 import SEO from '../components/SEO';
 
 const SecondPage = () => (
   <Container>
     <SEO title="Page two" />
-    <h1>Heading One</h1>
+    <Heading h1>Heading One</Heading>
     <p>
       This is a paragraph of text that should be long enough to wrap. If not, we
       can repeat it over and over again until it does wrap. This is a paragraph
@@ -15,7 +16,7 @@ const SecondPage = () => (
       and over again until it does wrap. This is a paragraph of text that should
       be long enough to wrap.
     </p>
-    <h2>Heading Two</h2>
+    <Heading h2>Heading Two</Heading>
     <p>
       This is a paragraph of text that should be long enough to wrap. If not, we
       can repeat it over and over again until it does wrap. This is a paragraph
@@ -23,7 +24,7 @@ const SecondPage = () => (
       and over again until it does wrap. This is a paragraph of text that should
       be long enough to wrap.
     </p>
-    <h3>Heading Three</h3>
+    <Heading h3>Heading Three</Heading>
     <p>
       This is a paragraph of text that should be long enough to wrap. If not, we
       can repeat it over and over again until it does wrap. This is a paragraph
@@ -31,7 +32,7 @@ const SecondPage = () => (
       and over again until it does wrap. This is a paragraph of text that should
       be long enough to wrap.
     </p>
-    <h4>Heading Four</h4>
+    <Heading h4>Heading Four</Heading>
     <p>
       This is a paragraph of text that should be long enough to wrap. If not, we
       can repeat it over and over again until it does wrap. This is a paragraph
@@ -39,7 +40,7 @@ const SecondPage = () => (
       and over again until it does wrap. This is a paragraph of text that should
       be long enough to wrap.
     </p>
-    <h5>Heading Five</h5>
+    <Heading h5>Heading Five</Heading>
     <p>
       This is a paragraph of text that should be long enough to wrap. If not, we
       can repeat it over and over again until it does wrap. This is a paragraph
@@ -47,15 +48,7 @@ const SecondPage = () => (
       and over again until it does wrap. This is a paragraph of text that should
       be long enough to wrap.
     </p>
-    <h6>Heading Six</h6>
-    <p>
-      This is a paragraph of text that should be long enough to wrap. If not, we
-      can repeat it over and over again until it does wrap. This is a paragraph
-      of text that should be long enough to wrap. If not, we can repeat it over
-      and over again until it does wrap. This is a paragraph of text that should
-      be long enough to wrap.
-    </p>
-    <hr />>
+    <hr />
     <p>
       <em>This is italic text, made with em.</em>{' '}
       <i>This is italic text as well, made with i.</i>

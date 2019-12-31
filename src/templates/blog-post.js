@@ -5,6 +5,7 @@ import kebabCase from 'lodash/kebabCase';
 
 import { Link, graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
+import BlogPostStyles from '../styles/BlogPostStyles';
 
 const BlogPostTemplate = ({ data, pageContext }) => {
   const post = data.mdx;
@@ -13,24 +14,26 @@ const BlogPostTemplate = ({ data, pageContext }) => {
 
   return (
     <>
-      <h1>{post.frontmatter.title}</h1>
-      <p>{post.frontmatter.date}</p>
-      <p>
-        Categories:&nbsp;
-        {post.frontmatter.categories.map((cat, i) => (
-          <React.Fragment key={cat}>
-            {!!i && ', '}
-            <Link to={`/blog/category/${kebabCase(cat)}`}>{cat}</Link>
-          </React.Fragment>
-        ))}
-      </p>
-      {banner && (
-        <div>
-          <Img sizes={banner.childImageSharp.fluid} />
-        </div>
-      )}
-      <MDXRenderer>{post.body}</MDXRenderer>
-      <hr />
+      <BlogPostStyles>
+        <h1>{post.frontmatter.title}</h1>
+        <p>{post.frontmatter.date}</p>
+        <p>
+          Categories:&nbsp;
+          {post.frontmatter.categories.map((cat, i) => (
+            <React.Fragment key={cat}>
+              {!!i && ', '}
+              <Link to={`/blog/category/${kebabCase(cat)}`}>{cat}</Link>
+            </React.Fragment>
+          ))}
+        </p>
+        {banner && (
+          <div>
+            <Img sizes={banner.childImageSharp.fluid} />
+          </div>
+        )}
+        <MDXRenderer>{post.body}</MDXRenderer>
+        <hr />
+      </BlogPostStyles>
 
       <ul>
         <li>
